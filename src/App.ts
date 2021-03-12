@@ -33,7 +33,7 @@ class App {
 
   private initializeControllers(controllers: Controller[]) {
     controllers.forEach((controller) => {
-      this._app.use("/", controller.router);
+      this._app.use("/posts", controller.router);
     });
   }
 }
