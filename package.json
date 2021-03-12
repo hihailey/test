@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node-dev --respawn --transpile-only ./src/server.ts",
-    "postinstall": "tsc && cpx 'src/**/*.ejs' dist --watch"
+    "postinstall": "tsc && cpx 'src/**/*.ejs' dist"
   },
   "prettier": {
     "printWidth": 120
