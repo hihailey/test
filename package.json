@@ -4,11 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/server.js",
-    "postinstall": "tsc",
-    "watch-node": "nodemon dist/server.js",
-    "watch-ts": "tsc -w",
-    "deploy": "git add . && git commit -m Heroku && git push heroku master"
+    "start": "ts-node-dev --respawn --transpile-only ./src/server.ts",
+    "postinstall": "tsc && cpx 'src/**/*.ejs' dist --watch"
   },
   "prettier": {
     "printWidth": 120
@@ -43,7 +40,5 @@
     "@types/passport": "^1.0.6",
     "@types/passport-local": "^1.0.33",
     "ts-node-dev": "^1.1.6"
-  },
-  "engines": {"node":"14.10.1"}
-  
+  }
 }
